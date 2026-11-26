@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+/* CART LAYOUT */
+.cart-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.cart-items {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 2px 10px rgba(89, 54, 29, 0.08);
+    border: 1px solid #EFE2CF;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #EFE2CF;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 110px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #59361D; /* Coffee Brown */
+}
+
+.item-price {
+    color: #7A6855;
+    margin-bottom: 12px;
+}
+
+/* QUANTITY CONTROL */
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    color: #E0A526; /* Mustard accent */
+    border: 1px solid #E0A526;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #EFE2CF; /* Latte Cream background on hover */
+    color: #C7901E;
+}
+
+.quantity {
+    min-width: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #59361D;
+}
+
+.item-total {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 17px;
+    color: #59361D;
+}
+
+.remove-btn {
+    color: #A83232; /* Rich muted red for removal */
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+    color: #8A1C1C;
+}
+
+/* CART SUMMARY */
+.cart-summary {
+    width: 320px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(89, 54, 29, 0.08);
+    border: 1px solid #EFE2CF;
+}
+
+.cart-summary h2 {
+    margin-bottom: 25px;
+    color: #59361D;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #7A6855;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid #EFE2CF;
+    padding-top: 20px;
+    margin-top: 15px;
+    color: #59361D;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #E0A526; /* Mustard primary button */
+    color: #FFFFFF;
+    padding: 14px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #C7901E; /* Darker Mustard on hover */
+}
+
+/* EMPTY CART */
+.empty-cart {
+    background: #FFFFFF;
+    padding: 70px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(89, 54, 29, 0.08);
+    border: 1px solid #EFE2CF;
+}
+
+.empty-cart h2 {
+    margin-bottom: 15px;
+    color: #59361D;
+}
+
+.empty-cart p {
+    color: #7A6855;
+    margin-bottom: 25px;
+}
+
+.restaurant-btn {
+    display: inline-block;
+    background: #E0A526;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.restaurant-btn:hover {
+    background-color: #C7901E;
+}
+
+/* BACK TO MENU BUTTON */
+.back-menu-container {
+    width: 100%;
+    margin: 0 0 20px 0;
+    display: block;
+}
+
+a.back-menu-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #E0A526;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(89, 54, 29, 0.05);
+    border: 1px solid #EFE2CF;
+    transition: 0.3s;
+}
+
+a.back-menu-btn:hover {
+    background-color: #EFE2CF;
+    color: #C7901E;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .cart-wrapper {
+        flex-direction: column;
+    }
+
+    .cart-summary {
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    .item-total {
+        width: auto;
+    }
+}

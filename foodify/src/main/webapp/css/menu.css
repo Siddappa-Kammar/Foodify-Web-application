@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #59361D, #7A4B29); /* Rich Coffee Brown gradient */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #EFE2CF; /* Soft Latte Cream subtitle */
+}
+
+/* SEARCH BAR */
+.search-container {
+    width: 70%;
+    max-width: 700px;
+    margin: -25px auto 35px;
+    position: relative;
+}
+
+.search-container input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 30px;
+    padding: 0 25px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(89, 54, 29, 0.15);
+    background-color: #FFFFFF;
+    color: #59361D;
+}
+
+.search-container input::placeholder {
+    color: #9A8772;
+}
+
+/* MENU HEADER */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.menu-header h2 {
+    font-size: 28px;
+    color: #59361D;
+}
+
+.menu-header span {
+    color: #7A6855;
+    font-size: 14px;
+}
+
+/* MENU GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(89, 54, 29, 0.08);
+    border: 1px solid #EFE2CF;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(89, 54, 29, 0.16);
+}
+
+.food-image {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 210px;
+    background: linear-gradient(135deg, #EFE2CF, #D3C5B4); /* Latte Cream placeholder gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #59361D;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.item-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #59361D; /* Coffee Brown */
+}
+
+.description {
+    color: #7A6855;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 42px;
+    margin-bottom: 15px;
+}
+
+.available {
+    color: #388E3C;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.not-available {
+    color: #A83232;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #59361D;
+}
+
+.add-button {
+    background-color: #E0A526; /* Mustard primary button */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-button:hover {
+    background-color: #C7901E; /* Darker Mustard on hover */
+    transform: scale(1.04);
+}
+
+/* DYNAMIC QUANTITY CONTROL WIDGET */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border: 1px solid #E0A526;
+    border-radius: 8px;
+    width: 110px;
+    height: 38px;
+    box-shadow: 0 2px 5px rgba(224, 165, 38, 0.15);
+    overflow: hidden;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 100%;
+    background-color: transparent;
+    color: #E0A526;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: #EFE2CF; /* Latte Cream hover */
+    color: #C7901E;
+}
+
+.qty-count {
+    font-size: 15px;
+    font-weight: bold;
+    color: #59361D;
+}
+
+.empty-menu {
+    background-color: #FFFFFF;
+    padding: 60px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    color: #7A6855;
+    border: 1px solid #EFE2CF;
+}
+
+.empty-menu h3 {
+    color: #59361D;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-container {
+        width: 90%;
+    }
+
+    .menu-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
